@@ -5,10 +5,31 @@
     background-color: #95ac22;
     border-radius: 2rem;
     padding: 1rem;
+    color: white;
+    align-items: center;
 }
 .address {
     display: flex;
     flex-direction: column;
     gap: .5rem;
     background-color: #b7ce44;
+    color: #444;
+    margin-top: 1rem;
 }
+legend {
+  padding: 5px 10px;
+  color: white;
+  background-color: #5e6e11;
+  border-radius: 10px;
+}
+.button {
+    background-color: #5e6e11;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 10px;
+    border-radius: 2rem;
+  }
+.button:hover {
+    box-shadow: 0px 24px 38px 3px rgba(0,0,0,0.14) , 0px 9px 46px 8px rgba(0,0,0,0.12) , 0px 11px 15px -7px rgba(0,0,0,0.4) 
+  }

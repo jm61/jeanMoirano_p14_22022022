@@ -1,16 +1,16 @@
 //import React from "react";
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import Logo from "../assets/logo.webp"
 import {useState} from 'react'
 import "./Topbar.css"
-import Form from '../components/Form'
 
 /**
  * Navigation component
  * @returns render
  */
 const Topbar = () => {
-    const [isToggled, setIsToggled] = useState(true)
+  let navigate = useNavigate()
+  const [isToggled, setIsToggled] = useState(true)
   return (
     <header className="Topbar-container">
       <Link to="/">
@@ -22,7 +22,7 @@ const Topbar = () => {
         <Link onClick={() => setIsToggled(!isToggled)}
         className="list"
         to="/list">Employees List</Link>
-     : <Link onClick={() => setIsToggled(!isToggled)}
+     : <Link 
         className="list"
         to="/">Home</Link>
         }

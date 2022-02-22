@@ -1,6 +1,7 @@
 import './List.css'
 import Topbar from '../components/Topbar'
 const List = () => {
+    document.title = 'Wealth Health - Employees List'
     return (
         <div>
             <Topbar />
