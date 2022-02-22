@@ -1,0 +1,14 @@
+.containerForm {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    background-color: #95ac22;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+.address {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    background-color: #b7ce44;
+}
