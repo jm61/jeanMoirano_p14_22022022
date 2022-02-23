@@ -2,7 +2,7 @@ import { useState } from "react"
 import {states} from '../datas/states'
 import {departments} from '../datas/departments'
 import './Form.css'
-import Modal from './Modal'
+import Modal from 'jm61-p14-modal'
 
 const Form = () => {
     const [show, setShow] = useState(false)
