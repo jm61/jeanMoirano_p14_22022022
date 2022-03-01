@@ -1,12 +1,7 @@
-//import "./App.css";
-import Home from "./pages/Home";
-import List from "./pages/List";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home"
+import List from "./pages/List"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
-/**
- * App component manage the route
- * @returns route
- */
 function App() {
   return (
     <div className="App">
@@ -17,6 +12,6 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
-  );
+  )
 }
 export default App;

@@ -1,7 +1,5 @@
-//import React from "react";
-import { Link, useNavigate } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import Logo from "../assets/logo.webp"
-import {useState} from 'react'
 import "./Topbar.css"
 
 /**
@@ -9,23 +7,14 @@ import "./Topbar.css"
  * @returns render
  */
 const Topbar = () => {
-  let navigate = useNavigate()
-  const [isToggled, setIsToggled] = useState(true)
   return (
     <header className="Topbar-container">
-      <Link to="/">
+      <NavLink to="/">
         <img src={Logo} alt="Logo" className="logo" />
-      </Link>
+      </NavLink>
         <h1 className="title">HRnet</h1>
-
-        {isToggled ? 
-        <Link onClick={() => setIsToggled(!isToggled)}
-        className="list"
-        to="/list">Employees List</Link>
-     : <Link 
-        className="list"
-        to="/">Home</Link>
-        }
+      <NavLink activeclassname="active" className="list" to="/list">Employees List</NavLink>
+      <NavLink activeclassname="active" className="list" to="/">Home</NavLink>
     </header>
   )
 }

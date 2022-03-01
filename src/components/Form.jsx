@@ -3,6 +3,7 @@ import {states} from '../datas/states'
 import {departments} from '../datas/departments'
 import './Form.css'
 import Modal from 'jm61-p14-modal'
+import list from '../datas/list'
 
 const Form = () => {
     const [show, setShow] = useState(false)
@@ -13,9 +14,9 @@ const Form = () => {
         startDate: '',
         street: '',
         city: '',
-        state: '',
+        states: '',
         zipCode: '',
-        department: '',
+        departments: '',
       })
     const handleChange = e => {
       e.preventDefault()
@@ -26,8 +27,9 @@ const Form = () => {
     }
     const submit = e => {
       e.preventDefault()
-      console.log(Form)
-      localStorage.setItem('List',JSON.stringify(Form))
+      list.push(Form)
+      console.log(list)
+      localStorage.setItem('employees',JSON.stringify(list))
       setShow(true)
     }
     
@@ -55,10 +57,10 @@ const Form = () => {
         />
 
         <label htmlFor="birthDate">Date of Birth</label>
-        <input type="date" id="birthDate"/>
+        <input type="date" id="birthDate" name="birthDate" onChange={handleChange} value={Form.birthDate} required/>
 
         <label htmlFor="startDate">Start Date</label>
-        <input type="date" id="startDate" />
+        <input type="date" id="startDate" name="startDate" onChange={handleChange} value={Form.startDate} required />
 
         <fieldset className="address">
           <legend className="legend"> Address </legend>
@@ -72,7 +74,8 @@ const Form = () => {
           <label htmlFor="zipCode">Zip Code</label>
           <input type="number" id="zipCode" value={Form.zipCode} onChange={handleChange} required />
 
-          <select name='states' id='states'>
+          <select name='states' id='states' onChange={handleChange} required >
+          <option>Select a State</option>
           {states.map( data => (
             <option value={data.value} key={data.abbreviation}>
             {data.name}
@@ -81,10 +84,11 @@ const Form = () => {
           </select>
         </fieldset>
 
-        <select name='departments' id='departments'>
-        {departments.map( department => (
-            <option value={department.value} key={department.id}>
-            {department.name}
+        <select name='departments' id='departments' onChange={handleChange} required>
+          <option>Select a department</option>
+        {departments.map( data => (
+            <option value={data.value} key={data.id}>
+            {data.name}
           </option>
           ))}
         </select>
