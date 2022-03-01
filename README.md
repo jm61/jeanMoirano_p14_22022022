@@ -12,8 +12,7 @@ Project for WealthHealth, pass a JQuery library to React
 * [react-router-dom](https://reactrouter.com/web/guides/quick-start) v6.2.1
 * [Prop-types](https://www.npmjs.com/package/prop-types) v15.8.1
 * [react-table](https://react-table.tanstack.com/) version 7.7.0
-* [react-datepicker](https://reactdatepicker.com/) version 4.2.1
-* [modal-react-module](https://www.npmjs.com/package/) 
+* [jm61-p14-modal] version 0.1.4
 
 # 3. Install and run the project
 

@@ -2,7 +2,8 @@ import "./List.css"
 import list from "../datas/list.js"
 import "../components/Topbar.css"
 import Topbar from '../components/Topbar'
-import Table from '../components/Table'
+//import Table from '../components/Table'
+import TestTable from '../components/table/tableTest'
 
 
 const List = () => {
@@ -19,6 +20,7 @@ const List = () => {
       </header> */}
       <div className="container">
         <h1>Employees List</h1>
+        <TestTable />
         {list.map((employee, idx) => (
           <h2 key={idx}>
             {" "}
