@@ -18,7 +18,7 @@ Project for WealthHealth, pass a JQuery library to React
 
 a. Clone the repository :
 
-   https://github.com/jm61/jm61-jeanMoirano_13_11022022.git
+   https://github.com/jm61/jeanMoirano_p14_22022022/tree/main
 
 b. In the local repository, install dependencies:
 

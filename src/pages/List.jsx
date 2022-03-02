@@ -1,32 +1,19 @@
 import "./List.css"
-import list from "../datas/list.js"
 import "../components/Topbar.css"
 import Topbar from '../components/Topbar'
-//import Table from '../components/Table'
-import TestTable from '../components/table/tableTest'
-
+import {lazy, Suspense} from 'react'
+const Table = lazy(() => import('../components/table/tableTest'))
 
 const List = () => {
   document.title = "Wealth Health - Employees List"
   return (
     <div>
       <Topbar />
-      {/* <header className="Topbar-container">
-        <Link to="/">
-          <img src={Logo} alt="Logo" className="logo" />
-        </Link>
-        <h1 className="title">HRnet</h1>
-        <Link to="/" className="list">Home</Link>
-      </header> */}
       <div className="container">
         <h1>Employees List</h1>
-        <TestTable />
-        {list.map((employee, idx) => (
-          <h2 key={idx}>
-            {" "}
-            {employee.firstName} {employee.lastName}
-          </h2>
-        ))}
+        <Suspense fallback={<q>Page is loading...</q>}>
+        <Table />
+        </Suspense>
       </div>
     </div>
   )

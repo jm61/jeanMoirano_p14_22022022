@@ -42,6 +42,17 @@ const list = [
         "states":"North Dakota",
         "zipCode":"8888",
         "departments":"Human Resources"  
+    },
+    {
+        "firstName":"Jean Louis Alexandre",
+        "lastName":"de Richemont",
+        "birthDate":"1984-10-13",
+        "startDate":"2019-02-04",
+        "street":"Avenue du Maréchal Juin",
+        "city":"Villeneuve Coublet",
+        "states":"North Dakota",
+        "zipCode":"91562",
+        "departments":"Human Resources"  
     }
 ]
 export default list
