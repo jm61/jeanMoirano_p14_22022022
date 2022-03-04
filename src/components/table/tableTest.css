@@ -5,7 +5,7 @@
 
 .table__header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .table__header--selector,
@@ -25,6 +25,7 @@
 
 .table__header--input {
   border-radius: 5px;
+  margin-left: 1rem;
 }
 
 .table__contain {
@@ -54,7 +55,7 @@
   width: 30px;
 }
 .table__head--tr {
-  background-color: #4c640d;
+  background-color: #96ad23;
   color: #ffffff;
   text-align: left;
 }
@@ -73,9 +74,9 @@
 }
 
 .table__body--tr:nth-of-type(even) {
-  background-color: #bec786;
+  background-color: khaki;
 }
 
 .table__body--tr:last-of-type {
-  border-bottom: 2px solid #4c640d;
+  border-bottom: 2px solid #96ad23;
 }

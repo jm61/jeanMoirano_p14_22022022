@@ -1,24 +1,31 @@
 import './tableTest.css'
-import {useTable, usePagination} from 'react-table'
+//import {FaArrowDown, FaArrowUp} from 'react-icons/fa'
+import {BiDownArrow, BiUpArrow} from 'react-icons/bi'
+import {useTable, usePagination, useGlobalFilter} from 'react-table'
 import {useMemo} from 'react'
 import {Columns} from './Columns'
+import GlobalFilter from './GlobalFilter'
 
 const TableTest = () => {
   const fromLS = JSON.parse(localStorage.getItem("employees")) || []
   const columns = useMemo(() => Columns, []);
   const data = useMemo(() => fromLS, []);
-  const tableInstance = useTable({columns,data}, usePagination)
+  const tableInstance = useTable({columns,data}, useGlobalFilter,usePagination)
   const {
     getTableProps,
     headerGroups,
     prepareRow,
     getTableBodyProps,
-    page
+    page,
+    setGlobalFilter,
+    state
   } = tableInstance
+  const {globalFilter} = state
   return (
     <div className="table__container">
+      <BiUpArrow /><BiDownArrow />
       <header className="table__header">
-        <small>Header</small>    
+      <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />  
       </header>
       <table className="table__contain" {...getTableProps()}>
         {/* Table Header */}

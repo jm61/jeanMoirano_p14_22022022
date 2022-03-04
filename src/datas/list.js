@@ -16,7 +16,7 @@ const list = [
         "birthDate": "1990-12-14",
         "startDate": "2010-03-17",
         "street": "bbbb",
-        "city": "nnnn",
+        "city": "Bandol",
         "zipCode": "6666",
         "states": "Delaware",
         "departments": "Legal" 
@@ -40,8 +40,8 @@ const list = [
         "street":"nnnn",
         "city":"ffff",
         "states":"North Dakota",
-        "zipCode":"8888",
-        "departments":"Human Resources"  
+        "zipCode":"45612",
+        "departments":"Sales"  
     },
     {
         "firstName":"Jean Louis Alexandre",

@@ -11,7 +11,7 @@ const List = () => {
       <Topbar />
       <div className="container">
         <h1>Employees List</h1>
-        <Suspense fallback={<q>Page is loading...</q>}>
+        <Suspense fallback={<q>Employees List is loading...</q>}>
         <Table />
         </Suspense>
       </div>
