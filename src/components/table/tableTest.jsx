@@ -5,6 +5,7 @@ import {useTable, usePagination, useGlobalFilter} from 'react-table'
 import {useMemo} from 'react'
 import {Columns} from './Columns'
 import GlobalFilter from './GlobalFilter'
+import PageSize from './PageSize'
 
 const TableTest = () => {
   const fromLS = JSON.parse(localStorage.getItem("employees")) || []
@@ -18,13 +19,15 @@ const TableTest = () => {
     getTableBodyProps,
     page,
     setGlobalFilter,
-    state
+    state,
+    setPageSize
   } = tableInstance
-  const {globalFilter} = state
+  const {globalFilter, pageSize} = state
   return (
     <div className="table__container">
       <BiUpArrow /><BiDownArrow />
       <header className="table__header">
+      <PageSize pageSize={pageSize} setPageSize={setPageSize} />
       <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />  
       </header>
       <table className="table__contain" {...getTableProps()}>

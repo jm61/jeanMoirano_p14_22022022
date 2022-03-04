@@ -5,7 +5,7 @@
 
 .table__header {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .table__header--selector,
@@ -13,6 +13,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
+}
+
+.select {
+  margin: 0 .5rem 0 .5rem;
 }
 
 .table__header--search {
@@ -25,7 +30,7 @@
 
 .table__header--input {
   border-radius: 5px;
-  margin-left: 1rem;
+  margin-left: .5rem;
 }
 
 .table__contain {
