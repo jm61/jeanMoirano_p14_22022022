@@ -9,6 +9,6 @@ const GlobalFilter = ({ filter, setFilter }) => {
           placeholder="enter your search..."
         />
       </div>
-    );
-  };
+    )
+  }
 export default GlobalFilter

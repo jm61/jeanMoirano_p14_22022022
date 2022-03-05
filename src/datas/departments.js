@@ -1,7 +1,8 @@
 export const departments = [
-    {'id':0,'name': 'Sales'},
-    {'id':1,'name': 'Marketing'},
-    {'id':2,'name': 'Engineering'},
-    {'id':3,'name': 'Human Resources'},
-    {'id':4,'name': 'Legal'}
+    {'id':0,'name': 'Select a department'},
+    {'id':1,'name': 'Sales'},
+    {'id':2,'name': 'Marketing'},
+    {'id':3,'name': 'Engineering'},
+    {'id':4,'name': 'Human Resources'},
+    {'id':5,'name': 'Legal'}
 ]

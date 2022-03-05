@@ -3,8 +3,8 @@ const dateFormatChange = new Intl.DateTimeFormat('fr-FR', {
     day: 'numeric',
     month: 'numeric',
     year: 'numeric'
-  }).format(new Date(date));
-  return dateFormatChange;
+  }).format(new Date(date))
+  return dateFormatChange
 };
 export const Columns = [
   {
@@ -45,4 +45,4 @@ export const Columns = [
     Header: "Zip Code",
     accessor: "zipCode",
   },
-];
+]

@@ -58,7 +58,7 @@ const TableTest = () => {
                   );
                 })}
               </tr>
-            );
+            )
           })}
         </tbody>
         {/* End of Table Body */}

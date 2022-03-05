@@ -4,6 +4,8 @@ import {departments} from '../datas/departments'
 import './Form.css'
 import Modal from 'jm61-p14-modal'
 import list from '../datas/list'
+import Select from '../components/Select'
+import Calendar from '../components/Calendar'
 
 const Form = () => {
     const [show, setShow] = useState(false)
@@ -23,7 +25,7 @@ const Form = () => {
       setForm((prevState) => ({
         ...prevState,
         [e.target.id]: e.target.value,
-      }));
+      }))
     }
     const submit = e => {
       e.preventDefault()
@@ -55,12 +57,10 @@ const Form = () => {
           onChange={handleChange}
           required
         />
+        {/* <label htmlFor="birthDate">Date of Birth</label> */}
+        <Calendar label='Date of Birth' name='birthDate' id='birthDate' action={handleChange} />
 
-        <label htmlFor="birthDate">Date of Birth</label>
-        <input type="date" id="birthDate" name="birthDate" onChange={handleChange} value={Form.birthDate} required/>
-
-        <label htmlFor="startDate">Start Date</label>
-        <input type="date" id="startDate" name="startDate" onChange={handleChange} value={Form.startDate} required />
+        <Calendar label='Start Date' name='startDate' id='startDate' action={handleChange} />
 
         <fieldset className="address">
           <legend className="legend"> Address </legend>
@@ -74,24 +74,11 @@ const Form = () => {
           <label htmlFor="zipCode">Zip Code</label>
           <input type="number" id="zipCode" value={Form.zipCode} onChange={handleChange} required />
 
-          <select name='states' id='states' onChange={handleChange} required >
-          <option>Select a State</option>
-          {states.map( data => (
-            <option value={data.value} key={data.abbreviation}>
-            {data.name}
-          </option>
-          ))}
-          </select>
+          <Select name="States" id="states" type={states} action={handleChange} />
         </fieldset>
-
-        <select name='departments' id='departments' onChange={handleChange} required>
-          <option>Select a department</option>
-        {departments.map( data => (
-            <option value={data.value} key={data.id}>
-            {data.name}
-          </option>
-          ))}
-        </select>
+          
+          <Select name="Departments" id="departments" type={departments} action={handleChange} />
+        
           <button className="button" type="submit">Add Employee</button>
         </form> 
           <Modal onClose={() => setShow(false)} show={show} >

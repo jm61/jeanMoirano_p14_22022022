@@ -1,4 +1,4 @@
-function PageSize({ pageSize, setPageSize }) {
+const PageSize = ({ pageSize, setPageSize }) => {
     return (
       <label htmlFor="entriesSelector" className="table__header--selector">
         show
@@ -11,6 +11,6 @@ function PageSize({ pageSize, setPageSize }) {
         </select>
         entries
       </label>
-    );
+    )
   }
-  export default PageSize;
+  export default PageSize
