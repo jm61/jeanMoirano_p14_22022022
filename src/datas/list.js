@@ -53,6 +53,17 @@ const list = [
         "states":"North Dakota",
         "zipCode":"91562",
         "departments":"Human Resources"  
+    },
+    {
+        "firstName":"Jocelyn",
+        "lastName":"Italio",
+        "birthDate":"1981-06-01",
+        "startDate":"2017-03-03",
+        "street":"Libertad",
+        "city":"Butuan",
+        "states":"Caraga",
+        "zipCode":"8600",
+        "departments":"Human Resources"  
     }
 ]
 export default list

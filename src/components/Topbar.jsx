@@ -18,4 +18,4 @@ const Topbar = () => {
     </header>
   )
 }
-export default Topbar;
+export default Topbar
