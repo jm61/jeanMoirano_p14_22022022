@@ -1,11 +1,11 @@
 import './tableTest.css'
-//import {FaArrowDown, FaArrowUp} from 'react-icons/fa'
 import {BiDownArrow, BiUpArrow} from 'react-icons/bi'
 import {useTable, usePagination, useGlobalFilter, useSortBy} from 'react-table'
 import {useMemo} from 'react'
 import {Columns} from './Columns'
 import GlobalFilter from './GlobalFilter'
 import PageSize from './PageSize'
+import PageIndex from './PageIndex'
 
 const TableTest = () => {
   const fromLS = JSON.parse(localStorage.getItem("employees")) || []
@@ -21,10 +21,15 @@ const TableTest = () => {
     page,
     setGlobalFilter,
     state,
-    setPageSize
+    setPageSize,
+    nextPage,
+    previousPage,
+    gotoPage,
+    canNextPage,
+    canPreviousPage,
   } = tableInstance
 
-  const {globalFilter, pageSize} = state
+  const {globalFilter, pageSize, pageIndex} = state
 
   return (
     <div className="table__container">
@@ -67,6 +72,16 @@ const TableTest = () => {
         </tbody>
         {/* End of Table Body */}
       </table>
+      <PageIndex
+        data={data}
+        gotoPage={gotoPage}
+        canNextPage={canNextPage}
+        canPreviousPage={canPreviousPage}
+        page={page}
+        nextPage={nextPage}
+        pageIndex={pageIndex}
+        previousPage={previousPage}
+        />
     </div>
   )
 }
