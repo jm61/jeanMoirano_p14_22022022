@@ -1,3 +1,10 @@
+import PropTypes from "prop-types"
+
+/**
+ * Calendar (DatePicker) component
+ * @param {name, label, id, action} props of Calendar component
+ * @returns
+ */
 const Calendar = ({name, id, action, label}) => {
     return (
         <div className='center'>
@@ -6,4 +13,10 @@ const Calendar = ({name, id, action, label}) => {
         </div>
     )
 }
+Calendar.propTypes = {
+    name: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+    action: PropTypes.func.isRequired,
+  };
 export default Calendar

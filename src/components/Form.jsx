@@ -8,6 +8,11 @@ import list from '../datas/list'
 import Select from '../components/Select'
 import Calendar from '../components/Calendar'
 
+/**
+ * Form component, capture data from different inputs and
+ * add in localStorage
+ * @returns render
+ */
 const Form = () => {
     const [show, setShow] = useState(false)
     const [Form, setForm] = useState({

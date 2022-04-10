@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+/* @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 /* Box sizing rules */
 *,
 *::before,
@@ -36,7 +36,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-family: 'Josefin Sans', cursive;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* A elements that don't have a class get default styles */

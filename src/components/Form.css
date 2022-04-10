@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: .5rem;
-    background-color: #95ac22;
+    background-color: #566411;
     border-radius: 2rem;
     padding: 1rem;
     color: white;
@@ -13,7 +13,7 @@
     flex-direction: column;
     gap: .5rem;
     background-color: #b7ce44;
-    color: #444;
+    color: #222;
     margin-top: 1rem;
 }
 legend {

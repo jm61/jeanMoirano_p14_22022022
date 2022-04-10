@@ -33,7 +33,7 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 .table__pagination {
-  background-color: #96ad23;
+  background-color: #566411;
   color: #ffffff;
   display: flex;
   justify-content: center;
@@ -56,7 +56,7 @@
   margin: 0 .5rem 0 .5rem;
 }
 .table__head--tr {
-  background-color: #96ad23;
+  background-color: #566411;
   color: #ffffff;
   text-align: left;
 }
@@ -67,6 +67,10 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.table__head--th:active {
+  background-color: #fff;
+  color: #96ad23;
 }
 .table__body--tr {
   border-bottom: 1px solid #dddddd;

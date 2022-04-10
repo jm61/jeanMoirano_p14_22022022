@@ -1,9 +1,9 @@
 import { NavLink, Link } from "react-router-dom"
-import Logo from "../assets/logo.webp"
+import Logo from "../assets/logo.png"
 import "./Topbar.css"
 
 /**
- * Navigation component
+ * Topbar component
  * @returns render
  */
 const Topbar = () => {

@@ -1,3 +1,10 @@
+import PropTypes from "prop-types";
+
+/**
+ * Select component (dropdown menus)
+ * @param {type, name, id, action} props of the Select component
+ * @returns
+ */
 const Select = ({type, name, id, action}) => {
   
     return (
@@ -13,4 +20,10 @@ const Select = ({type, name, id, action}) => {
         </div>
     )
 }
+Select.propTypes = {
+  type: PropTypes.array.isRequired,
+  name: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  action: PropTypes.func.isRequired,
+};
 export default Select

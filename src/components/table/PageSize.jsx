@@ -1,3 +1,10 @@
+import PropTypes from "prop-types"
+
+/**
+ * PageSize component, react-table hook
+ * @param {pageSize, setPageSize} param state 
+ * @returns 
+ */
 const PageSize = ({ pageSize, setPageSize }) => {
     return (
       <label htmlFor="entriesSelector" className="table__header--selector">
@@ -12,5 +19,9 @@ const PageSize = ({ pageSize, setPageSize }) => {
         entries
       </label>
     )
+  }
+  PageSize.propTypes = {
+    pageSize: PropTypes.number.isRequired,
+    setPageSize: PropTypes.func.isRequired,
   }
   export default PageSize

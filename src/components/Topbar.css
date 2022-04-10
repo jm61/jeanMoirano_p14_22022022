@@ -17,7 +17,7 @@
       font-weight: 600;
       margin-right: 2rem;
       text-decoration: none;
-      background-color: #96ad23;
+      background-color: #566411;
       color: white;
       padding: 1rem;
       border-radius: 2rem;
@@ -27,6 +27,5 @@
   }
   .active {
     background-color: khaki;
-    color: #7d8f27;
-    border-style: inset;
+    color: #566411;
   }
