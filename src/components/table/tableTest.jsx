@@ -10,10 +10,8 @@ import { useGlobalState } from '../../state'
 
 const TableTest = () => {
   const [data] = useGlobalState('employee') || []
-  //console.log(data)
-  //const fromLS = JSON.parse(localStorage.getItem("employees")) || []
+  console.log(data)
   const columns = useMemo(() => Columns, []);
-  //const data = useMemo(() => fromLS, []);
   const tableInstance = useTable({columns,data}, useGlobalFilter,useSortBy,usePagination)
 
   const {

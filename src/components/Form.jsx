@@ -3,8 +3,6 @@ import {states} from '../datas/states'
 import {departments} from '../datas/departments'
 import './Form.css'
 import Modal from 'jm61-p14-modal'
-//import Modal from '../../npm/src/lib/components/Modal'
-//import list from '../datas/list'
 import Select from '../components/Select'
 import Calendar from '../components/Calendar'
 import { useGlobalState } from '../state.js'
@@ -55,6 +53,7 @@ import { useGlobalState } from '../state.js'
   
       const newEmployees = [...employees, newEmployee]
       setEmployees(newEmployees)
+      console.log(JSON.stringify(newEmployees,null,2))
       setShow(true)
       console.log(newEmployees)
       const form = e.target
