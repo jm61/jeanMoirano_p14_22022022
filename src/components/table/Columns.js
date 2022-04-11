@@ -9,11 +9,11 @@ const dateFormatChange = new Intl.DateTimeFormat('fr-FR', {
 export const Columns = [
   {
     Header: "First Name",
-    accessor: "firstName",
+    accessor: "firstname",
   },
   {
     Header: "Last Name",
-    accessor: "lastName",
+    accessor: "lastname",
   },
   {
     Header: "Start Date",
@@ -27,7 +27,7 @@ export const Columns = [
     },
     {
     Header: "Department",
-    accessor: "departments",
+    accessor: "department",
   },
   {
     Header: "Street",
@@ -39,7 +39,7 @@ export const Columns = [
   },
   {
     Header: "State",
-    accessor: "states",
+    accessor: "state",
   },
   {
     Header: "Zip Code",

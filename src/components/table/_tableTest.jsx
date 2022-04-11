@@ -9,12 +9,12 @@ import PageIndex from './PageIndex'
 import { useGlobalState } from '../../state'
 
 const TableTest = () => {
-  const [data] = useGlobalState('employee') || []
-  //console.log(data)
-  //const fromLS = JSON.parse(localStorage.getItem("employees")) || []
+  const fromLS = JSON.parse(localStorage.getItem("employees")) || []
   const columns = useMemo(() => Columns, []);
-  //const data = useMemo(() => fromLS, []);
-  const tableInstance = useTable({columns,data}, useGlobalFilter,useSortBy,usePagination)
+  const data = useMemo(() => fromLS, []);
+  const employees = useGlobalState('employee')
+  //console.table(employees)
+  const tableInstance = useTable({columns,employees}, useGlobalFilter,useSortBy,usePagination)
 
   const {
     getTableProps,

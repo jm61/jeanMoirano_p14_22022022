@@ -4,61 +4,41 @@ import {departments} from '../datas/departments'
 import './Form.css'
 import Modal from 'jm61-p14-modal'
 //import Modal from '../../npm/src/lib/components/Modal'
-//import list from '../datas/list'
+import list from '../datas/list'
 import Select from '../components/Select'
 import Calendar from '../components/Calendar'
-import { useGlobalState } from '../state.js'
 
 /**
  * Form component, capture data from different inputs and
- * add in useGlobalState
+ * add in localStorage
  * @returns render
  */
- export default function Form() {
-  const [show, setShow] = useState(false)
-  const [employees, setEmployees] = useGlobalState('employee')
-
-  const [addFromData, setAddFormData] = useState({
-    firstname: '',
-    lastname: '',
-    startDate: '',
-    department: '',
-    birthDate: '',
-    street: '',
-    city: '',
-    state: '',
-    zipCode: '',
-  })
+const Form = () => {
+    const [show, setShow] = useState(false)
+    const [Form, setForm] = useState({
+        firstName: '',
+        lastName: '',
+        birthDate: '',
+        startDate: '',
+        street: '',
+        city: '',
+        states: '',
+        zipCode: '',
+        departments: '',
+      })
     const handleChange = e => {
       e.preventDefault()
-      const fieldName = e.target.getAttribute('name')
-      const fieldValue = e.target.value
-      const newFormData = { ...addFromData }
-      newFormData[fieldName] = fieldValue
-      setAddFormData(newFormData)
+      setForm((prevState) => ({
+        ...prevState,
+        [e.target.id]: e.target.value,
+      }))
     }
-   
     const submit = e => {
       e.preventDefault()
-
-      const newEmployee = {
-        firstname: addFromData.firstName,
-        lastname: addFromData.lastName,
-        startDate: addFromData.startDate,
-        department: addFromData.Departments,
-        birthDate: addFromData.birthDate,
-        street: addFromData.Street,
-        city: addFromData.City,
-        state: addFromData.States,
-        zipCode: addFromData.zipCode,
-      }
-  
-      const newEmployees = [...employees, newEmployee]
-      setEmployees(newEmployees)
+      list.push(Form)
+      console.log(list)
+      localStorage.setItem('employees',JSON.stringify(list))
       setShow(true)
-      console.log(newEmployees)
-      const form = e.target
-      form.reset()
     }
     
     return (
@@ -69,7 +49,7 @@ import { useGlobalState } from '../state.js'
           type="text"
           name="firstName"
           id="firstName"
-          
+          value={Form.firstName}
           onChange={handleChange}
           required
         />
@@ -92,13 +72,13 @@ import { useGlobalState } from '../state.js'
           <legend className="legend"> Address </legend>
 
           <label htmlFor="street">Street</label>
-          <input type="text" id="street" name="Street" value={Form.street} onChange={handleChange} required />
+          <input type="text" id="street" value={Form.street} onChange={handleChange} required />
 
           <label htmlFor="city">City</label>
-          <input type="text" id="city" name="City" value={Form.city} onChange={handleChange} required />
+          <input type="text" id="city" value={Form.city} onChange={handleChange} required />
 
           <label htmlFor="zipCode">Zip Code</label>
-          <input type="number" name="zipCode" id="zipCode" value={Form.zipCode} onChange={handleChange} required />
+          <input type="number" id="zipCode" value={Form.zipCode} onChange={handleChange} required />
 
           <Select name="States" id="states" type={states} action={handleChange} />
         </fieldset>
@@ -108,8 +88,9 @@ import { useGlobalState } from '../state.js'
           <button className="button" type="submit">Add Employee</button>
         </form> 
           <Modal onClose={() => setShow(false)} show={show} >
-            {addFromData.firstName} {addFromData.lastName}
+            {Form.firstName} {Form.lastName}
           </Modal>
     </div>
     )
 }
+export default Form
